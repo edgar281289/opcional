@@ -33,15 +33,11 @@ public class ControlRaton extends javax.media.j3d.Behavior {
               if (events[n]  instanceof MouseEvent){
                 MouseEvent em = (MouseEvent) events[n] ;
                 if (em.getID() == MouseEvent.MOUSE_CLICKED) {
+                    
                     float x = em.getX();
-                    float y = em.getY();
-                   
-                    /*
-                    if (ek.getKeyChar() == 'w') personaje.adelante= true;
-                    else if (ek.getKeyChar() == 'a') personaje.izquierda=true;
-                    else if (ek.getKeyChar() == 'd') personaje.derecha=true;
-                    else if (ek.getKeyChar() == 's') personaje.atras=true;
-                    */
+                    float y = em.getYOnScreen();
+                    
+                    juego.posX = x;
                     juego.posY = y;
                     juego.crearBola = true;
                     
