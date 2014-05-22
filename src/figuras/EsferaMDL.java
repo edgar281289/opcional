@@ -35,9 +35,12 @@ public class EsferaMDL extends Figura {
 
         //Creacion de la forma visual MDL
         //nombre = "figura_MDL_" + identificador;
-        float altura = 1.5f;
+        float altura = 0.75f;
         TransformGroup figuraVisual = crearObjetoMDL(ficheroMDL, radio * 2);
-        CylinderShape figuraFisica = new CylinderShape(new Vector3f(radio*2,altura/2,radio*2));
+        
+        CylinderShape figuraFisica;
+        if(esPersonaje) figuraFisica = new CylinderShape(new Vector3f(radio*2,altura,radio*2));
+        else figuraFisica = new CylinderShape(new Vector3f(radio*2,altura*1.75f,radio*2));
         
         ramaFisica = new CollisionObject();
         ramaFisica.setCollisionShape(figuraFisica);

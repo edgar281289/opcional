@@ -46,7 +46,7 @@ public class Cubo extends Figura{
     public Cubo(BranchGroup conjunto, ArrayList<Figura> listaObjetosFisicos, Juego juego) {
         super(conjunto, listaObjetosFisicos, juego);
         
-        float lado = 0.25f;
+        float lado = 0.5f;
         
         Appearance apariencia = new Appearance();
         apariencia.setTexture(new TextureLoader(System.getProperty("user.dir") + "//texturas//madera.jpg", juego).getTexture());
